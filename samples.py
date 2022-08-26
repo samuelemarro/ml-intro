@@ -24,7 +24,9 @@ for image_name in image_names:
     standard_images.append(image)
     globals()[image_name] = image
 
-special = object()
+class Special:
+    def __init__(self):
+        self.sunglasses_noalpha = load_sample('sunglasses_alpha', drop_alpha=False)
+        self.sunglasses_alpha = load_sample('sunglasses_noalpha')
 
-setattr(special, 'sunglasses_alpha', load_sample('sunglasses_alpha', drop_alpha=False))
-setattr(special, 'sunglasses_noalpha', load_sample('sunglasses_noalpha'))
+special = Special()
