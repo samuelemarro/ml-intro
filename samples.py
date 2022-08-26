@@ -26,7 +26,7 @@ for image_name in image_names:
 
 class Special:
     def __init__(self):
-        self.sunglasses_noalpha = load_sample('sunglasses_alpha', drop_alpha=False)
-        self.sunglasses_alpha = load_sample('sunglasses_noalpha')
+        self.sunglasses_alpha = load_sample('sunglasses_alpha', drop_alpha=False)
+        self.sunglasses_noalpha = load_sample('sunglasses_noalpha')
 
 special = Special()
