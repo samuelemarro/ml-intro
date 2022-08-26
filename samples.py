@@ -14,10 +14,10 @@ def load_sample(name, rescale=True):
         image = image.astype(np.float) / 255
     return image
 
-sample_names = ['bird', 'ghibly', 'mario', 'scientist', 'tuscany']
+image_names = ['bird', 'ghibly', 'mario', 'scientist', 'tuscany']
 all_images = []
 
-for sample_name in sample_names:
-    image = load_sample(sample_name)
+for image_name in image_names:
+    image = load_sample(image_name)
     all_images.append(image)
-    globals()[sample_name] = image
+    globals()[image_name] = image
