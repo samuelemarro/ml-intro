@@ -14,7 +14,7 @@ def load_sample(name, rescale=True, crop=True):
         image = image.astype(np.float) / 255
     return image
 
-sample_names = ['secretary']
+sample_names = ['bird']
 
 for sample_name in sample_names:
     globals()[sample_name] = load_sample(sample_name)
