@@ -6,7 +6,7 @@ import numpy as np
 
 def load_sample(name, rescale=True, crop=True):
     base_path = os.path.abspath(os.path.dirname(__file__))
-    path = Path(base_path) / 'img' / (name + ('_crop' if crop else '') + '.png')
+    path = Path(base_path) / 'img' / (name + '.png')
     image = Image.open(path)
     image = np.asarray(image)
 
