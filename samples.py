@@ -8,6 +8,7 @@ def load_sample(name, rescale=True):
     base_path = os.path.abspath(os.path.dirname(__file__))
     path = Path(base_path) / 'img' / (name + '.png')
     image = Image.open(path)
+    image = image.convert('RGB')
     image = np.asarray(image)
 
     if rescale:
