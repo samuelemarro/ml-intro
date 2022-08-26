@@ -30,3 +30,12 @@ class Special:
         self.sunglasses_noalpha = load_sample('sunglasses_noalpha')
 
 special = Special()
+
+class Filter:
+    def __init__(self) -> None:
+        self.names = ['aden', 'clarendon', 'crema', 'gingham', 'juno', 'lark', 'ludwig', 'moon', 'perpetua', 'reyes', 'slumber']
+        self.images = [load_sample(f'filters/{name}') for name in self.names]
+        for name, image in zip(self.names, self.images):
+            setattr(self, name, image)
+
+filter = Filter()
