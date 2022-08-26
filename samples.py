@@ -19,6 +19,6 @@ image_names = ['bird', 'ghibli', 'mario', 'scientist', 'tuscany']
 all_images = []
 
 for image_name in image_names:
-    image = load_sample(image_name)
+    image = load_sample(image_name, rescale=False)
     all_images.append(image)
     globals()[image_name] = image
