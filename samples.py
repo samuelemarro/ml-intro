@@ -14,7 +14,7 @@ def load_sample(name, rescale=True):
         image = image.astype(np.float) / 255
     return image
 
-image_names = ['bird', 'ghibly', 'mario', 'scientist', 'tuscany']
+image_names = ['bird', 'ghibli', 'mario', 'scientist', 'tuscany']
 all_images = []
 
 for image_name in image_names:
