@@ -5,9 +5,9 @@ def normalize_image(image):
     pass
 
 def plot_image(image, title=None):
-    plot_images([image], None if title is None else [title])
+    plot_images([image], titles=(None if title is None else [title]))
 
-def plot_images(images, columns=2, titles=None):
+def plot_images(images, titles=None, columns=2):
     columns = min(columns, len(images))
     rows = int(ceil(len(images) / columns))
 
