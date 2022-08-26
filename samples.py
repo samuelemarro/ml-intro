@@ -4,11 +4,12 @@ from pathlib import Path
 
 import numpy as np
 
-def load_sample(name, rescale=True):
+def load_sample(name, rescale=False, drop_alpha=True):
     base_path = os.path.abspath(os.path.dirname(__file__))
     path = Path(base_path) / 'img' / (name + '.png')
     image = Image.open(path)
-    image = image.convert('RGB')
+    if drop_alpha:
+        image = image.convert('RGB')
     image = np.asarray(image)
 
     if rescale:
@@ -16,9 +17,14 @@ def load_sample(name, rescale=True):
     return image
 
 image_names = ['bird', 'ghibli', 'mario', 'scientist', 'tuscany']
-all_images = []
+standard_images = []
 
 for image_name in image_names:
-    image = load_sample(image_name, rescale=False)
-    all_images.append(image)
+    image = load_sample(image_name)
+    standard_images.append(image)
     globals()[image_name] = image
+
+special = object()
+
+setattr(special, 'sunglasses_alpha', load_sample('sunglasses_alpha', drop_alpha=False))
+setattr(special, 'sunglasses_noalpha', load_sample('sunglasses_noalpha'))
