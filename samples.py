@@ -30,6 +30,7 @@ class Special:
         self.sunglasses_noalpha = load_sample('special/sunglasses_noalpha')
         self.bw_gradient = load_sample('special/bw_gradient')
         self.apple = load_sample('special/apple')
+        self.sudoku = load_sample('special/sudoku')
 
 special = Special()
 
