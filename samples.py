@@ -32,6 +32,8 @@ class Special:
         self.apple = load_sample('special/apple')
         self.sudoku = load_sample('special/sudoku')
         self.boomer = load_sample('special/boomer')
+        self.parrots = load_sample('special/parrots')
+        self.parrots_mask = load_sample('special/parrots_mask')
 
 special = Special()
 
