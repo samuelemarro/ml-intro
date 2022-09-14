@@ -45,3 +45,12 @@ class Filter:
             setattr(self, name, image)
 
 filter = Filter()
+
+class Shining:
+    def __init__(self) -> None:
+        self.duvall = load_sample('special/duball')
+        self.knife_mask = load_sample('special/knife_mask')
+        self.nicholson = load_sample('special/nicholson')
+        self.title = load_sample('special/title')
+
+shining = Shining()
