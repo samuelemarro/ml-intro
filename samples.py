@@ -48,9 +48,10 @@ filter = Filter()
 
 class Shining:
     def __init__(self) -> None:
-        self.duvall = load_sample('special/duball')
-        self.knife_mask = load_sample('special/knife_mask')
-        self.nicholson = load_sample('special/nicholson')
-        self.title = load_sample('special/title')
+        self.duvall = load_sample('shining/duvall')
+        self.knife_mask = load_sample('shining/knife_mask')
+        self.nicholson = load_sample('shining/nicholson')
+        self.title = load_sample('shining/title')
+        self.wall = load_sample('shining/wall')
 
 shining = Shining()
