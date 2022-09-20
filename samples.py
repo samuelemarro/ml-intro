@@ -56,3 +56,14 @@ class Shining:
         self.wall = load_sample('shining/wall')
 
 shining = Shining()
+
+class Histogram:
+    def __init__(self) -> None:
+        self.apples = [load_sample(f'histogram/apple_{i}') for i in range(5)]
+        self.fish = [load_sample(f'histogram/fish_{i}') for i in range(5)]
+        self.apple_test = load_sample(f'histogram/apple_test')
+        self.fish_test = load_sample(f'histogram/fish_test')
+        self.apple_incorrect = load_sample(f'histogram/apple_incorrect')
+        self.fish_incorrect = load_sample(f'histogram/fish_incorrect')
+
+histogram = Histogram()
