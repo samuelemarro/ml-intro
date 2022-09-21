@@ -36,6 +36,7 @@ class Special:
         self.parrots_mask = load_sample('special/parrots_mask')
         self.birds = load_sample('special/birds')
         self.coins = load_sample('special/coins')
+        self.people = load_sample('special/people')
 
 special = Special()
 
