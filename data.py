@@ -4,7 +4,9 @@ from pathlib import Path
 import numpy as np
 
 def load_dataset_file(path):
-    return np.load(path.as_posix(), allow_pickle=True)
+    if isinstance(path, Path):
+        path = path.as_posix()
+    return np.load(path, allow_pickle=True)
     
 def _load_internal_dataset(name):
     base_path = os.path.abspath(os.path.dirname(__file__))
