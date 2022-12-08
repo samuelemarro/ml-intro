@@ -18,3 +18,8 @@ def flowers_dataset():
     images = _load_internal_dataset('flowers_images.npy')
     labels = _load_internal_dataset('flowers_labels.npy')
     return images, labels
+
+def ecg_dataset():
+    inputs = _load_internal_dataset('ecg_values.npy')
+    labels = _load_internal_dataset('ecg_labels.npy')
+    return inputs, labels
