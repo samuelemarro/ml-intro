@@ -23,3 +23,6 @@ def ecg_dataset():
     inputs = _load_internal_dataset('ecg_values.npy')
     labels = _load_internal_dataset('ecg_labels.npy')
     return inputs, labels
+
+def meteo_dataset():
+    return _load_internal_dataset('meteo.npy')
