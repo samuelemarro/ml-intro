@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+import json
 
 import numpy as np
 
@@ -26,3 +27,8 @@ def ecg_dataset():
 
 def meteo_dataset():
     return _load_internal_dataset('meteo.npy')
+
+def sp250_dataset():
+    with open('data/sp250_info.json') as f:
+        data = json.load(f)
+    return _load_internal_dataset('sp250_values.npy'), np.array(data['category']), data['names'], data['category_names']
