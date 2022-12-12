@@ -30,11 +30,13 @@ def meteo_dataset():
     return _load_internal_dataset('meteo.npy')
 
 def sp250_dataset():
-    with open('data/sp250_info.json') as f:
+    base_path = os.path.abspath(os.path.dirname(__file__))
+    with open(Path(base_path) / 'data/sp250_info.json') as f:
         data = json.load(f)
     return _load_internal_dataset('sp250_values.npy'), np.array(data['category']), data['names'], data['category_names']
 
 def headlines_dataset():
-    data = pd.read_csv('data/headlines.csv')
+    base_path = os.path.abspath(os.path.dirname(__file__))
+    data = pd.read_csv(Path(base_path) / 'data/headlines.csv')
 
     return list(data['headlines']), list(data['complete_text'])
